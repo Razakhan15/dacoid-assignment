@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="md:h-screen md:w-1/2 lg:w-1/4 md:m-auto md:relative">
+      <div class="flex justify-between px-5 py-2 hidden lg:block">
+        <span class="font-bold">9:41</span>
+        <div>
+          <i class="h-5 w-5 fa-solid fa-signal"></i>
+          <i class="h-5 w-5 fa-sharp fa-solid fa-wifi"></i>
+          <i class="h-5 w-5 fa-sharp fa-solid fa-battery-half"></i>
+        </div>
+      </div>
+      <div class="p-5 mt-5">
+        <h1 class="font-bold text-xl">Create an account</h1>
+        <div class="p-2">
+          <input
+            required
+            class="bg-[#f1f1f1] w-full mt-4 p-2 rounded-lg"
+            type="text"
+            placeholder="Email"
+          /><input
+            required
+            class="bg-[#f1f1f1] w-full mt-4 p-2 rounded-lg"
+            placeholder="Password"
+            type="text"
+          />
+        </div>
+        <div class=" text-gray-500 mt-2">
+            <a href="#" class="border-b border-gray-300 text-sm">Forgot your password?</a>
+        </div>
+        <div class="mt-10 flex flex-col gap-3 md:absolute bottom-0 w-full lg:p-5 left-0">
+          <a href="goals.html">
+            <button
+              class="w-full p-4 bg-gradient-to-r from-blue-300 to-[#7e96ff] font-semibold rounded-xl text-white"
+            >
+              Sign In
+            </button>
+          </a>
+          <div class="flex justify-center items-center">
+            <span class="border-b-2 border-gray-300 w-full"></span>
+            <span class="p-1">or</span>
+            <span class="border-b-2 border-gray-300 w-full"></span>
+          </div>
+          <div class="flex justify-center items-center gap-5">
+            <div
+              class="border-2 cursor-pointer border-gray-300 rounded-xl p-2 w-fit"
+            >
+              <img class="h-5 w-5" src="images/google.png" alt="" />
+            </div>
+            <div
+              class="border-2 cursor-pointer border-gray-300 rounded-xl p-2 w-fit"
+            >
+              <img class="h-5 w-5" src="images/facebook.png" alt="" />
+            </div>
+          </div>
+          <div>
+            <p class="text-sm text-gray-500 text-center">
+                Don’t have an account yet? 
+              <a
+                href="signup.html"
+                class="text-blue-500 border-b border-blue-500"
+                >Create an account</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
