@@ -14,8 +14,12 @@
     <title>Document</title>
   </head>
   <body class="font-sans">
-    <div class="md:h-screen md:w-1/2 lg:w-1/4 md:m-auto md:relative">
-      <div class="lg:flex justify-between px-5 py-2 hidden ">
+    <form
+      name="myForm"
+      action="/login.html"
+      class="md:h-screen md:w-1/2 lg:w-1/4 md:m-auto md:relative"
+    >
+      <div class="lg:flex justify-between px-5 py-2 hidden">
         <span class="font-bold">9:41</span>
         <div>
           <i class="h-5 w-5 fa-solid fa-signal"></i>
@@ -23,29 +27,33 @@
           <i class="h-5 w-5 fa-sharp fa-solid fa-battery-half"></i>
         </div>
       </div>
-      <div class="p-5 mt-5">
+      <div class="p-5">
         <h1 class="font-bold text-xl">Create an account</h1>
         <div class="p-2">
           <input
             required
+            name="fname"
             class="bg-[#f1f1f1] w-full mt-4 p-2 rounded-lg"
             type="text"
             placeholder="First Name"
           /><input
             required
+            name="lname"
             class="bg-[#f1f1f1] w-full mt-4 p-2 rounded-lg"
             type="text"
             placeholder="Last Name"
           /><input
             required
+            name="email"
             class="bg-[#f1f1f1] w-full mt-4 p-2 rounded-lg"
-            type="text"
+            type="email"
             placeholder="Email"
           /><input
             required
+            name="password"
             class="bg-[#f1f1f1] w-full mt-4 p-2 rounded-lg"
             placeholder="Password"
-            type="text"
+            type="password"
           />
         </div>
         <div class="flex gap-1 text-gray-500 items-center justify-center mt-2">
@@ -59,7 +67,9 @@
             >
           </div>
         </div>
-        <div class="mt-10 flex flex-col gap-3 md:absolute  bottom-0 w-full left-0 lg:p-5 ">
+        <div
+          class="mt-10 flex flex-col gap-3 md:absolute bottom-0 w-full left-0 lg:p-5"
+        >
           <a href="login.html">
             <button
               class="w-full p-4 bg-gradient-to-r from-blue-300 to-[#7e96ff] font-semibold rounded-xl text-white"
@@ -73,23 +83,29 @@
             <span class="border-b-2 border-gray-300 w-full"></span>
           </div>
           <div class="flex justify-center items-center gap-5">
-            <div class="border-2 cursor-pointer border-gray-300 rounded-xl p-2 w-fit">
+            <div
+              class="border-2 cursor-pointer border-gray-300 rounded-xl p-2 w-fit"
+            >
               <img class="h-5 w-5" src="images/google.png" alt="" />
             </div>
-            <div class="border-2 cursor-pointer border-gray-300 rounded-xl p-2 w-fit">
+            <div
+              class="border-2 cursor-pointer border-gray-300 rounded-xl p-2 w-fit"
+            >
               <img class="h-5 w-5" src="images/facebook.png" alt="" />
             </div>
           </div>
           <div>
             <p class="text-sm text-gray-500 text-center">
               Already have an account?
-              <a href="login.html" class="text-blue-500 border-b border-blue-500"
+              <a
+                href="login.html"
+                class="text-blue-500 border-b border-blue-500"
                 >Login</a
               >
             </p>
           </div>
         </div>
       </div>
-    </div>
+    </form>
   </body>
 </html>

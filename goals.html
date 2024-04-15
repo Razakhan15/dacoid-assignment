@@ -13,9 +13,14 @@
     />
     <title>Document</title>
   </head>
-  <body>
-    <form class="md:h-screen md:w-1/2 lg:w-1/4 md:m-auto md:relative">
-      <div class="lg:flex justify-between px-5 py-2 hidden ">
+  <body class="font-sans">
+    <form
+      onsubmit="return validateForm()"
+      name="myForm"
+      action="/home.html"
+      class="h-full md:w-1/2 lg:w-1/4 md:m-auto"
+    >
+      <div class="lg:flex justify-between px-5 py-2 hidden">
         <span class="font-bold">9:41</span>
         <div>
           <i class="h-5 w-5 fa-solid fa-signal"></i>
@@ -23,76 +28,255 @@
           <i class="h-5 w-5 fa-sharp fa-solid fa-battery-half"></i>
         </div>
       </div>
-      <div class="mt-5">
+      <div class="p-5">
         <h1 class="font-bold text-xl text-center">What are your goals?</h1>
         <div class="p-2">
           <div
-            class="bg-[#f1f1f1] flex justify-between w-full mt-4 p-3 rounded-lg"
+            class="bg-[#f1f1f1] flex items-center justify-between w-full mt-4 p-3 rounded-lg"
           >
             <span>Weight Loss</span>
-            <input
-              type="checkbox"
-              class="appearance-none w-4 h-4 border border-indigo-500 rounded-sm bg-white checked:bg-indigo-800 checked:border-0"
-            />
+            <div class="inline-flex items-center">
+              <label
+                class="relative flex items-center p-3 rounded-full cursor-pointer"
+                htmlFor="check"
+              >
+                <input
+                  name="Weight"
+                  type="checkbox"
+                  class="before:content[''] peer relative h-5 w-5 cursor-pointer appearance-none rounded-md border-2 border-indigo-500 transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-12 before:w-12 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-blue-gray-500 before:opacity-0 before:transition-opacity checked:border-indigo-800 checked:bg-indigo-800 checked:before:bg-gray-900 hover:before:opacity-10"
+                  id="check"
+                />
+                <span
+                  class="absolute text-white transition-opacity opacity-0 pointer-events-none top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 peer-checked:opacity-100"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-3.5 w-3.5"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    stroke="currentColor"
+                    stroke-width="1"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                </span>
+              </label>
+            </div>
           </div>
           <div
-            class="bg-[#f1f1f1] flex justify-between w-full mt-4 p-3 rounded-lg"
+            class="bg-[#f1f1f1] flex justify-between w-full items-center mt-4 p-3 rounded-lg"
           >
             <span>Muscle Gain</span>
-            <input
-              type="checkbox"
-              class="appearance-none w-4 h-4 border border-indigo-500 rounded-sm bg-white checked:bg-indigo-800 checked:border-0"
-            />
+            <div class="inline-flex items-center">
+              <label
+                class="relative flex items-center p-3 rounded-full cursor-pointer"
+                htmlFor="check"
+              >
+                <input
+                  name="Muscle"
+                  type="checkbox"
+                  class="before:content[''] peer relative h-5 w-5 cursor-pointer appearance-none rounded-md border-2 border-indigo-500 transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-12 before:w-12 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-blue-gray-500 before:opacity-0 before:transition-opacity checked:border-indigo-800 checked:bg-indigo-800 checked:before:bg-gray-900 hover:before:opacity-10"
+                  id="check"
+                />
+                <span
+                  class="absolute text-white transition-opacity opacity-0 pointer-events-none top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 peer-checked:opacity-100"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-3.5 w-3.5"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    stroke="currentColor"
+                    stroke-width="1"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                </span>
+              </label>
+            </div>
           </div>
           <div
-            class="bg-[#f1f1f1] flex justify-between w-full mt-4 p-3 rounded-lg"
+            class="bg-[#f1f1f1] flex justify-between w-full items-center mt-4 p-3 rounded-lg"
           >
             <span>Flexibility and Mobility</span>
-            <input
-              type="checkbox"
-              class="appearance-none w-4 h-4 border border-indigo-500 rounded-sm bg-white checked:bg-indigo-800 checked:border-0"
-            />
+            <div class="inline-flex items-center">
+              <label
+                class="relative flex items-center p-3 rounded-full cursor-pointer"
+                htmlFor="check"
+              >
+                <input
+                  name="Flexibility"
+                  type="checkbox"
+                  class="before:content[''] peer relative h-5 w-5 cursor-pointer appearance-none rounded-md border-2 border-indigo-500 transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-12 before:w-12 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-blue-gray-500 before:opacity-0 before:transition-opacity checked:border-indigo-800 checked:bg-indigo-800 checked:before:bg-gray-900 hover:before:opacity-10"
+                  id="check"
+                />
+                <span
+                  class="absolute text-white transition-opacity opacity-0 pointer-events-none top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 peer-checked:opacity-100"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-3.5 w-3.5"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    stroke="currentColor"
+                    stroke-width="1"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                </span>
+              </label>
+            </div>
           </div>
           <div
-            class="bg-[#f1f1f1] flex justify-between w-full mt-4 p-3 rounded-lg"
+            class="bg-[#f1f1f1] flex justify-between w-full items-center mt-4 p-3 rounded-lg"
           >
             <span>General Fitness</span>
-            <input
-              type="checkbox"
-              class="appearance-none w-4 h-4 border border-indigo-500 rounded-sm bg-white checked:bg-indigo-800 checked:border-0"
-            />
+            <div class="inline-flex items-center">
+              <label
+                class="relative flex items-center p-3 rounded-full cursor-pointer"
+                htmlFor="check"
+              >
+                <input
+                  name="General"
+                  type="checkbox"
+                  class="before:content[''] peer relative h-5 w-5 cursor-pointer appearance-none rounded-md border-2 border-indigo-500 transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-12 before:w-12 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-blue-gray-500 before:opacity-0 before:transition-opacity checked:border-indigo-800 checked:bg-indigo-800 checked:before:bg-gray-900 hover:before:opacity-10"
+                  id="check"
+                />
+                <span
+                  class="absolute text-white transition-opacity opacity-0 pointer-events-none top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 peer-checked:opacity-100"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-3.5 w-3.5"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    stroke="currentColor"
+                    stroke-width="1"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                </span>
+              </label>
+            </div>
           </div>
           <div
-            class="bg-[#f1f1f1] flex justify-between w-full mt-4 p-3 rounded-lg"
+            class="bg-[#f1f1f1] flex justify-between w-full items-center mt-4 p-3 rounded-lg"
           >
             <span>Event - specific training</span>
-            <input
-              type="checkbox"
-              class="appearance-none w-4 h-4 border border-indigo-500 rounded-sm bg-white checked:bg-indigo-800 checked:border-0"
-            />
+            <div class="inline-flex items-center">
+              <label
+                class="relative flex items-center p-3 rounded-full cursor-pointer"
+                htmlFor="check"
+              >
+                <input
+                  name="Event"
+                  type="checkbox"
+                  class="before:content[''] peer relative h-5 w-5 cursor-pointer appearance-none rounded-md border-2 border-indigo-500 transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-12 before:w-12 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-blue-gray-500 before:opacity-0 before:transition-opacity checked:border-indigo-800 checked:bg-indigo-800 checked:before:bg-gray-900 hover:before:opacity-10"
+                  id="check"
+                />
+                <span
+                  class="absolute text-white transition-opacity opacity-0 pointer-events-none top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 peer-checked:opacity-100"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-3.5 w-3.5"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    stroke="currentColor"
+                    stroke-width="1"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                </span>
+              </label>
+            </div>
           </div>
           <div
-            class="bg-[#f1f1f1] flex justify-between w-full mt-4 p-3 rounded-lg"
+            class="bg-[#f1f1f1] flex justify-between w-full items-center mt-4 p-3 rounded-lg"
           >
             <span>Mindfulness and Mental Health</span>
-            <input
-              type="checkbox"
-              class="appearance-none w-4 h-4 border border-indigo-500 rounded-sm bg-white checked:bg-indigo-800 checked:border-0"
-            />
+            <div class="inline-flex items-center">
+              <label
+                class="relative flex items-center p-3 rounded-full cursor-pointer"
+                htmlFor="check"
+              >
+                <input
+                  name="Mindfulness"
+                  type="checkbox"
+                  class="before:content[''] peer relative h-5 w-5 cursor-pointer appearance-none rounded-md border-2 border-indigo-500 transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-12 before:w-12 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-blue-gray-500 before:opacity-0 before:transition-opacity checked:border-indigo-800 checked:bg-indigo-800 checked:before:bg-gray-900 hover:before:opacity-10"
+                  id="check"
+                />
+                <span
+                  class="absolute text-white transition-opacity opacity-0 pointer-events-none top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 peer-checked:opacity-100"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-3.5 w-3.5"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    stroke="currentColor"
+                    stroke-width="1"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                </span>
+              </label>
+            </div>
           </div>
         </div>
-        <div
-          class="mt-10 flex flex-col gap-3 md:absolute bottom-0 w-full p-5 left-0"
-        >
-          <a href="login.html">
-            <button
-              class="w-full p-4 bg-gradient-to-r from-blue-300 to-[#7e96ff] font-semibold rounded-xl text-white"
-            >
-              Confirm
-            </button>
-          </a>
+        <div class="mt-10 flex flex-col gap-3 w-full p-5 left-0">
+          <button
+            class="w-full p-4 bg-gradient-to-r from-blue-300 to-[#7e96ff] font-semibold rounded-xl text-white"
+          >
+            Confirm
+          </button>
         </div>
       </div>
     </form>
   </body>
+  <script>
+    function validateForm() {
+      Weight = document.forms["myForm"]["Weight"].value;
+      Muscle = document.forms["myForm"]["Muscle"].value;
+      Flexibility = document.forms["myForm"]["Flexibility"].value;
+      General = document.forms["myForm"]["General"].value;
+      Event1 = document.forms["myForm"]["Event"].value;
+      Mindfulness = document.forms["myForm"]["Mindfulness"].value;
+      if (
+        Weight === "" ||
+        Muscle === "" ||
+        Flexibility === "" ||
+        General === "" ||
+        Event === "" ||
+        Mindfulness === ""
+      ) {
+        alert("fill");
+        return false;
+      }
+    }
+  </script>
 </html>
